@@ -17,7 +17,7 @@
           Apellidos
         </th>
         <th>
-          fecha de nacimiento
+          Fecha de nacimiento
         </th>
         <th>
           Lugar de nacimiento
@@ -28,13 +28,24 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        
-      </tr>
+      <?php foreach ($personas as $persona ): ?>
+        <tr>
+          <td>
+            <?php echo $persona['nombre'] ?>
+          </td>
+          <td>
+            <?php echo $persona['apellido_paterno'].' '.$persona['apellido_materno'] ?>
+          </td>
+          <td>
+            <?php echo $persona['l_nacimiento'] ?>
+          </td>
+          <td>
+            <?php echo $persona['vio_pelicula'] ?>
+          </td>
+        </tr>
+      <?php endforeach; ?>
     </tbody>
   </table>
-  <?php foreach ($personas as $persona ): ?>
 
-  <?php endforeach; ?>
 </body>
 </html>
